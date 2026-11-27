@@ -8,7 +8,9 @@
   <InventoryIcon texture="Content/Items/InventoryIconAtlas.png" sourcerect="640,256,64,64" origin="0.5,0.6" />
   <Sprite texture="Content/Items/Tools/tools.png" sourcerect="314,1,94,74" origin="0.5,0.5" depth="0.6" />
   <Body width="90" height="60" density="20" />
-  <ItemContainer capacity="1" AllowSwappingContainedItems="false" />
-  <ConditionStorage maxItemCount="1024" slotIndex="0" iconScale="0.6" iconShiftX="0" iconShiftY="0.1" />
+  <ItemContainer capacity="1" AllowSwappingContainedItems="false" maxStackSize="8">
+    <Containable items="smallitem,mediumitem" excludeditems="io_box,toolbelt,toolbox,mobilecontainer" />
+  </ItemContainer>
+  <ConditionStorage maxItemCount="1024" slotIndex="0" iconScale="0.6" iconShiftX="0" iconShiftY="0.1" maxStackSize="8" />
   <Holdable slots="Any,RightHand,LeftHand" holdpos="0,-70" handle1="-5,0" handle2="10,-20" holdangle="0" msg="ItemMsgPickUpUse" canbeselected="false" canbepicked="true" pickkey="Use" allowswappingwhenpicked="false" />
 </Item>
